@@ -4,61 +4,148 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>hub do illan</title>
-    <link rel="stylesheet" href="startpage1.css" />
+    <link rel="stylesheet" href="startpage2-2.css" />
+    <script src="startpage2-4.js" defer></script>
   </head>
   <body>
     <div id="bgContainer">
     <header>
       <h1>Bom dia, Illan!</h1>
-      <h3>Tenha uma ótima quinta-feira :D</h3>        
-      <q>something something</q>
-      <footer>-- Almeida Alves,<cite>As brumas de peidar</cite></footer>
-  
-    </header>
+      <h3>Tenha uma ótima quinta ( :</h3>
+      
+   </header>
 
     <section>
-      <div class="quadros">
+        <div class="quadros">
         <h2>SKILLS</h2>
+            <div class="skillBox">
+                <button class="skillBtn" id="codeBtn" onclick="codeXp()">+</button>
+                <div class="skillDetails">
+                    <div class="skillInfo">
+                        <label for="coding">𝕮𝖔𝖉𝖎𝖓𝖌</label><span class="infoRight"><p id="codeLvl">lvl:1</p></span>
+                    </div>
+                    <meter id="codeMeter" min="0" max="50" low="20" high="30" optimum="40" value="1"></meter>
+                </div>
+                <img src="./imagens/keywave.png" width="70" height="70"/>
+            </div>
+            <div class="skillBox">
+              <button class="skillBtn" id="physicalBtn" onclick="physicalXp()">+</button>
+              <div class="skillDetails">
+                  <div class="skillInfo">
+                      <label for="physical education">𝕻𝖍𝖞𝖘𝖎𝖈𝖆𝖑</label><span class="infoRight"><p id="physicalLvl">lvl:1</p></span>
+                  </div>
+                  <meter id="physicalMeter" min="0" max="50" low="20" high="30" optimum="40" value="1"></meter>
+              </div>
+              <img src="./imagens/gym.png" width="70" height="70"/>
+          </div>
+          <div class="skillBox">
+            <button class="skillBtn" id="socialBtn" onclick="socialXp()">+</button>
+            <div class="skillDetails">
+                <div class="skillInfo">
+                    <label for="social media">𝕾𝖔𝖈𝖎𝖆𝖑</label><span class="infoRight"><p id="socialLvl">lvl:1</p></span>
+                </div>
+                <meter id="socialMeter" min="0" max="50" low="20" high="30" optimum="40" value="1"></meter>
+            </div>
+            <img src="./imagens/social.png" width="70" height="70"/>
+        </div>
+          
 
-        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
       </div>
 
-      <div class="quadros">
+      <div id="todoQuadro" class="quadros">
         <h2>TO DO</h2>
-
-        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">+</button>
+        <ul id="taskList"></ul>
       </div>
-
       <div class="quadros">
-        <h2>POMODORO</h2>
-
-        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
-
-        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
-        <h2>Week X</h2>
+        <h2 id="currentWeek">WEEK X</h2>
         <div id="weekGraph"></div>
+        <h2>PROJECTS</h2>
+        <div id="projetosBox">
+          <div class="projetoBox">
+            <button class="projetoBtn" onclick="reactXp()">+</button>
+            <div class="projetoDetails">
+                <div class="projetoInfo">
+                    <label for="react">𝕽𝖊𝖆𝖈𝖙</label><span class="infoRight"><p>MDN</p></span>
+                </div>
+                <meter id="reactMeter" min="0" max="7" low="3" high="6" optimum="7" value="0"></meter>
+            </div>
+            <img src="./imagens/reactmdn.png" width="75" height="70"/>
+          </div>
+       
+          <div class="projetoBox">
+            <button class="projetoBtn" onclick="fccXp()">+</button>
+            <div class="projetoDetails">
+                <div class="projetoInfo">
+                  <label for="fcc first certification">𝕱𝕮𝕮</label><span class="infoRight"><p id="fccLvl">#1</p></span>
+                </div>
+              <meter id="fccMeter" min="0" max="5" low="2" high="4" optimum="5" value="0"></meter>
+            </div>
+            <img src="./imagens/fcc1.png" width="70" height="70"/>
+          </div>
+        </div>
         
       </div>
     </section>
     <div id="linkContainer">
       <div id="linksBar">
+        <a href="https://chat.openai.com" target="_blank">
+            <img src="./imagens/chatgpt.png" alt="ícone do chatgpt" width="35" height="32">
+          </a> 
+        <a href="https://www.freecodecamp.org/learn" target="_blank">
+          <img src="./imagens/fcc2.png" alt="ícone do free code camp" width="35" height="32">
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state" target="_blank">
+          <img src="./imagens/mdn1.png" alt="ícone do MDN" width="35" height="32">
+        </a>
         <a href="https://github.com" target="_blank">
-          <img src="./imagens/github.png" alt="ícone do git" width="35" height="30">
+          <img src="./imagens/github.png" alt="ícone do git" width="35" height="32">
+        </a>
+        <a href="https://www.reddit.com/r/Frontend//" target="_blank">
+          <img src="./imagens/reddit.png" alt="ícone do reddit" width="35" height="32">
+        </a>
+        <a href="file:///home/illan/Documentos/XII%20Works%20of%20Herkillan/tapago2.0/tapago2.html" target="_blank">
+            <img src="./imagens/tapago.png" alt="ícone de uma barra de ferro com anilhas" width="35" height="32">
         </a>
         <a href="https://youtube.com" target="_blank">
-          <img src="./imagens/yt.png" alt="ícone do youtube" width="35" height="30">
+          <img src="./imagens/yt.png" alt="ícone do youtube" width="35" height="32">
         </a>
-        <a href="https://freecodecamp.com" target="_blank">
-          <img src="./imagens/teclado.png" alt="ícone do free code camp" width="35" height="30">
-        </a>
+       
         <a href="https://twitter.com" target="_blank">
-          <img src="./imagens/twitter.png" alt="ícone do twitter" width="35" height="30">
+          <img src="./imagens/twitter.png" alt="ícone do twitter" width="35" height="32">
         </a>
-        <a href="https://developer.mozilla.org/" target="_blank">
-          <img src="./imagens/mdn1.png" alt="ícone do MDN" width="35" height="35">
+        <a href="https://web.whatsapp.com/" target="_blank">
+          <img src="./imagens/wpp.png" alt="ícone do whatsapp" width="35" height="32">
+        </a> 
+        <a href="https://thepiratebay.org/index.html" target="_blank">
+          <img src="./imagens/tpb.png" alt="icone do pirate bay" width="35" height="32">
         </a>
+           
       </div>
     </div>
+  <section>
+    <div class="quadros" id="pomodoro">
+      <h2>TIMER</h2>
+      <div id="timer-container">
+        <div id="timer">50:00</div>
+        <div id="buttons">
+            <button onclick="startTimer(50)">50'</button>
+            <button onclick="startTimer(15)">15'</button>
+            <button onclick="resetTimer()">Stop</button>
+        </div>
+      </div>
+    </div>
+    <div class="quadros" id="searchWeb">
+        <h2>SEARCH THE WEB</h2>
+      <div class="gcse-search"></div>
+    </div>
+    <div class="quadros" id="quoteContainer">
+      
+    </div>  
   </div>
+</section>
+  <script async src="https://cse.google.com/cse.js?cx=c35d5bde231d24650">
+  </script>
   </body>
 </html>
