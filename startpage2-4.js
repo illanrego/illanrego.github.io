@@ -32,8 +32,35 @@ document.addEventListener('DOMContentLoaded', function() {
 	const diaAno = dia.toLocaleDateString('pt-BR', options);
   
 
-    miniGreetings.textContent = `${diaAno}`;
+    miniGreetings.textContent = `Hoje é ${diaAno}`;
   });
+
+
+// PAPEL DE PAREDE GERADO DE ACORDO COM O MÊS
+
+document.addEventListener('DOMContentLoaded', function(){
+	const date = new Date();
+	const month = date.getMonth();
+	
+	const months = {
+		"0": "janeiro",
+		"1": "fevereiro",
+		"2": "marco",
+		"3": "abril",
+		"4": "maio",
+		"5": "junho",
+		"6": "julho",
+		"7": "agosto",
+		"8": "setembro",
+		"9": "outubro",
+		"10": "novembro",
+		"11": "dezembro",
+	}
+
+	const backgroundImage = document.getElementById("bgContainer");
+	backgroundImage.style.backgroundImage = `url("./imagens/wallps/${months[month]}.jpg")`;
+
+})
 
 
 // GERADOR DE SEMANA
@@ -42,8 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentWeek = getWeekNumber(currentDate);
     document.getElementById('currentWeek').textContent = `Week ${currentWeek}`;
     const weekGraph = document.getElementById('weekGraph');
-
-    const table = document.createElement('table');
+	const table = document.createElement('table');
     const thead = document.createElement('thead');
     const tbody = document.createElement('tbody');
   
@@ -217,9 +243,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		const physicalMeter = document.getElementById("physicalMeter");
 		physicalMeter.value = localStorage.getItem("physicalCount");
-
-		const socialMeter = document.getElementById("socialMeter");
-		socialMeter.value = localStorage.getItem("socialCount");
 
 		const reactMeter = document.getElementById('reactMeter');
 		reactMeter.value = localStorage.getItem("reactCount");
