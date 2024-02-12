@@ -17,7 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const today = new Date();
     const hour = today.getHours();
     const greeting = document.querySelector('h1');
-	const name = "illan"
+	
+    if (!localStorage.getItem('name')) {
+      const newName = prompt("Insira seu nome:");
+      localStorage.setItem('name', newName);
+      }
+
+    const name = localStorage.getItem('name');
   
     if (hour >= 5 && hour < 12) {
       greeting.textContent = `Bom dia, ${name}!`;
