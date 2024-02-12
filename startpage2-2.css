@@ -1,9 +1,25 @@
-  html {
-    font-family: sans-serif;
-  }
+@font-face {
+  font-family: "win98";
+  src: url("win98.ttf") format('truetype');
+}
+
+
 
   body {
+    font-family: 'win98', sans-serif;
+    text-align: center;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .icon {
+    display:flex;
+    flex-direction: column;
   }
 
   header {
@@ -15,73 +31,193 @@
     
   }
 
-  blockquote {
-    background-color:rgba(250, 250, 250, 0.3);
-    border-radius: 5px;
-    padding: 5px 8px 0px 8px;
 
-  }
 
-  h1, h2, h3, q {
+  p, h1, h2, h3, q {
     text-align: center;
+    font-family: 'win98', sans-serif;
   }
 
   h2 {
     color: white;
+    text-align: left;
     line-height:30px;
     text-shadow: 1px 1px 1px black;
     margin: 0;
-    background-color: rgba(82, 82, 235);  
-    padding: 3px 5px;
+ 
+    padding: 2px 5px;
     
   }
 
   h1 {
     font-size: 4vw;
-    margin-top: 150px;
-    margin-bottom: 0px;
+    margin: 0;
     text-shadow: 2px 2px 2px black;
     color: white;
-    background-color: rgba(76, 174, 79, 0.5);
     padding-left: 10px;
     padding-right: 10px;
+    flex: 1;
+   
   }
+
+
 
   h3 {
     font-size: 20px;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    margin-bottom: 50px;
-    background-color: rgba(82, 82, 235, 0.5);    
+    color: rgb(64, 255, 64);
+    text-shadow: 1px 1px 1px black; 
     padding-left: 5px;
     padding-right: 5px;
+    flex: 1;
+    margin: 0;
 
   }
 
   p, li { color: black;
+    
   }
 
+  li {
+    display: flex;
+    align-items: center;
+    
+  
+  }
+
+
+#appMenu label {
+  font-family: "win98", sans-serif;
+  font-weight: normal;
+  font-size: medium;
+
+}
+
+  #startBtn img {
+    padding-top: 3px;
+    padding-right: 5px;
+  }
+
+  #appMenu li:hover {
+    background-color: #000099;
+    color: white;
+  }
+
+ #skillsContainer ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+      }
+
+ #skillsContainer {
+        display: none;
+        max-width: 500px;
+        min-width: 200px;
+        max-height: 300px;
+ }
+
+ #todoContainer p {
+    margin-top: 1px;
+    padding: 0;
+   
+  }
+
+  #todoContainer {
+    max-width: 500px;
+  }
+
+  #calcContainer {
+    display: none;
+    max-width: 250px;
+    max-height: 400px;
+  }
+  
+  #wallpContainer {
+    min-width: 100px;
+    max-width: 300px;
+    height: 100px;
+  }
  
+
+ 
+  #calendarContainer {
+    display: none;
+    min-width: fit-content;
+    max-width: fit-content;
+
+  }
+
+  #weekGraph {
+    padding: 10px;
+  }
 
   q {
         text-shadow: 1px 1px 1px black;
   }
 
+  .clock {
+    font-size: 1.3em;
+    
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    padding: 5px;
+    padding-bottom: 0px;
+    font-family: "win98", sans-serif;
+    margin-left: auto;  
+    margin-right: 5px;
+    margin-bottom: 5px;
+    min-width: 80px;
+
+    border-bottom: 2px solid #DDDDDD;
+    border-right: 2px solid #EEEEEE;
+    border-left: 1px solid #222222;
+    border-top: 1px solid #222222;
+
+  }
+  
+  span { padding: 0;
+          margin: 0;}
+
   section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  
+
     
   }
 
   .quadros {
-    padding: 8px;
+   
     margin: 20px 20px;
-    background: rgba(250, 250, 250, 0.8);
+    background: #CCCCCC;
     flex: 1 300px;
-    min-height: 300px;
-    min-width: 300px;
-  
+   
+    border-top: 3px solid #DDDDDD;
+    border-left: 3px solid #EEEEEE;
+    border-right: 4px solid #222222;
+    border-bottom: 4px solid #222222;
+    z-index: 2;
+  }
+
+
+  #appMenu {
+    border-right: 3px solid #222222;
+    border-bottom: 3px solid #222222;
+    height:fit-content;
+    width: 270px;
+  }
+
+  #greetings {
+    background-color: black;
+    padding: 2px;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    
   }
 
 
@@ -90,41 +226,75 @@
     align-items: center;
     justify-content: space-around;
     
+    width: 100%;
+    position: fixed;
+    background-color: #C0C0C0;    
+    bottom: 0px;
+    padding: 3px 0px 0px 0px;
+    border-top: 3px solid #DDDDDD;
+    height: calc(30px + 1vh);    
   }
 
   #linksBar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     flex: 1 800px;
-    padding: 5px 0px;
-    min-width: 50%;
-    position: fixed;
-    background-color: rgba(82, 82, 235, 0.5);    
-    top: 20px;
-    border-radius: 12px;
-    padding: 8px 15px;
-    
+    margin-left: 0.5vw;
+    margin-top: 0.5vw;
+  }
+
+ #startBtn {
+    font-size: 1.5rem;
+    margin: 0.5vh 0vh 1vh 0.5vh;
+    font-weight: 900;
+    display: flex;
+    border-top: 2px solid #DDDDDD;
+    border-left: 2px solid #EEEEEE;
+    border-right: 2px solid #222222;
+    border-bottom: 2px solid #222222;
  }
+
+ .barDivider {
+  margin: 0.5vh 0.5vh 1vh 0.7vh;
+
+  width: 0px;
+  height: 80%;
+  border-left: 1px solid darkslategrey;
+  border-right: 1px solid white;
+ }
+
+ .barDividerFat {
+  width: 0px;
+  height: 70%;
+  border-left: 2px ridge white;
+  border-right: 2px ridge grey;
+  margin: 0.5vh 0.5vh 1vh 0vh;
+
+ }
+
 
 
   #bgContainer {
         height: 100%;
         width: 100%;
-        background-image: url("./imagens/wallps/01-janeiro.jpg");
+        background-image: url("imagens/windowsgreen.jpeg");
         background-size: cover; /* or use a specific length value, e.g., background-size: 100px; */
         background-position: center;
         background-repeat: repeat-y;
         color: white;
+      
   }
 
 
  .skillBox {
-    border: 3px solid rgb(11, 6, 45);
+    border: 1px solid rgb(11, 6, 45);
     display: flex;
-    margin: 10px 0px;
-    border-radius: 5px;
+    margin: 10px 5px;
+    
     justify-content: space-between;
     flex-direction: row;
+    background-color: white;
  }
 
 
@@ -142,6 +312,7 @@
  .skillInfo {
     display: flex;
     justify-content: space-between;
+    
  }
 
  #projetosBox {
@@ -150,12 +321,12 @@
  }
 
  .projetoBox {
-  border: 3px solid rgb(11, 6, 45);
+  border: 1px solid rgb(11, 6, 45);
   display: flex;
-  margin: 10px 0px;
-  border-radius: 5px;
+  margin: 10px 5px;
   justify-content: space-between;
   flex-direction: row;
+  background-color: white;
 }
 
 
@@ -183,26 +354,71 @@
   
  }
 
- label {
-  font-size: 42px;
+label {
+  font-size: 34px;
   color: black;
   font-weight: 800;
+  font-family: "win98", sans-serif;
+
  }
- 
+
+ .icon:hover {
+  cursor: pointer
+ }
+
+ .icon:active {
+  background-color: #000099;
+ }
+
+ .icon:active label {
+  color: white;
+ }
+
+ #pomodoroIconDiv {
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  z-index: 0;
+ }
+
+ #todoIconDiv {
+  position: absolute;
+  top: 300px;
+  left: 30px;
+  z-index: 0;
+ }
+
+ #calendarIconDiv {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+  z-index: 0;
+ }
+
+#projetosContainer {
+  display: none;
+  max-height: 125px;
+  max-width: 250px;
+}
+
+
+.icon label {
+  font-size: medium;
+  font-weight: normal;
+
+  width: 80px;
+ }
+
+ .icon img {
+  margin-left: 10px;
+ }
+
+ #todoIconDiv img {
+  margin-left: 0;
+ }
 
  /* POMODORO CONTENTS */
 
- body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
 
 #timer-container {
     display: flex;
@@ -213,10 +429,10 @@
 
 #timer {
     font-size: 2.5rem;
-    margin: 20px 0px;
+   
     background-color: rgba(250, 250, 250, 0.8);
     color: black;
-    padding: 3px 8px;
+    padding: 4px;
 }
 
 #buttons {
@@ -226,29 +442,34 @@
 }
 
 
-
 button {
    
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-    width: 4vw;
-    height: 3vh;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #C0C0C0;
+  color: black;
+  border-top: 3px solid #DDDDDD;
+  border-left: 3px solid #EEEEEE;
+  border-right: 3px solid #222222;
+  border-bottom: 3px solid #222222;
+  font-family: "win98", sans-serif;
+  transition: background-color 0.3s;
+ 
 }
 
 
-button:hover {
-    background-color: #205a22;
+button:active {
+  border-bottom: 3px solid #DDDDDD;
+  border-right: 3px solid #EEEEEE;
+  border-left: 3px solid #222222;
+  border-top: 3px solid #222222;
 }
+
 
 .skillBtn {
   height:70px;
   width: 50px;
-  background-color: rgb(204, 255, 0); 
+  background-color: #C0C0C0; 
   transition: background-color 0.3s;
   color: black;
   font-size: 30px;
@@ -257,14 +478,14 @@ button:hover {
 }
 
 .skillBtn:hover {
-  background-color: #4caf50;
+  background-color: #666666;
   color: white;
 }
 
 .projetoBtn {
   height:70px;
   width: 50px;
-  background-color: rgb(204, 255, 0);
+  background-color: #C0C0C0;
   transition: background-color 0.3s;
   color: black;
   font-size: 30px;
@@ -273,16 +494,20 @@ button:hover {
 }
 
 .projetoBtn:hover {
-  background-color: #4caf50;
+  background-color: #666666;
   color: white;
 }
 
-#todoQuadro button {
+
+
+#todoContainer button {
     background-color: grey;
-    width: 5%;
-    height: 5%;
+    height: 1.5rem;
+    width: 1.5rem;
     padding: 0;
+    
 }
+
 
 a img {
   transition: transform 0.3s;
@@ -301,13 +526,14 @@ td, th {
   border: 1px solid black;
   padding: 3px;
   min-width: 70px;
-  background-color: #4caf50;
-  color: white;
+  background-color: antiquewhite;
+  color: black;
 
 }
 
 th {
-  background-color:  #205a22;
+  background-color:  #666666;
+  color: white;
 }
 
 
@@ -315,14 +541,35 @@ th {
   min-height: 100px;
   flex: 1 300px;
   max-width: 500px;
+  max-height: 160px;
+  display: none;
 
 }
 
+#pomodoroSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5vh 0;
+  padding: 10px;
+
+}
+
+#pomodoroSection img {
+  display: block;
+  flex: 1;
+  margin-right: 2vw;
+}
+
 #pomodoro {
-  min-height: 100px;
+  min-height: 200px;
+  max-height: 200px;
   flex: 1 200px;
-  min-width: 100px;
-  max-width: 500px;
+  min-width: 400px;
+  max-width: 400px;
+  padding-bottom: 10px;
+  display: none;
+
 }
 
 
@@ -330,16 +577,102 @@ th {
   margin-top: 15px;
 }
 
-#quoteContainer {
-  min-height: 80px;
-  max-height: 80px;
-  min-width: 80px;
-  max-width: 80px;
-  background-color: rgba(250, 250, 250, 0.0);
+#taskList {
+  background-color: white;
+  width: 40%;
+  margin: 10px auto;
+  font-weight: bold;
+  font-size: 18px;
+  list-style: square outside;
+  display: flex;
+  flex-direction: column;
+  
+  
+  
+} 
+
+#taskList li {
+  margin: 8px auto;
+  color: black;
+  list-style: lower-greek;
+
+
+
 }
+  
+
 
 #projetosBox {
   display: flex;
   flex-direction: row;
   gap: 5px;
+}
+
+
+
+#calculator {
+  text-align: center;
+  padding: 20px 0px;
+  margin: 0;
+  
+  border: 1px solid black;
+ 
+}
+
+
+
+input {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+
+input[type="text"] {
+  width: 200px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+
+#appMenu li {
+  list-style-type: none;
+  text-align: left;
+  padding-bottom: 10px;
+  margin-left: -35px;
+  gap: 10px;
+}
+
+legend {
+  margin: auto;
+  color: black;
+}
+
+.titleBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: linear-gradient(to right, #000080, #1E88CD);  
+}
+
+
+
+.titleBar button {
+  margin: 3px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  padding-bottom: 5px;
+
+}
+
+
+#calendarContainer td:nth-of-type(1) {
+  background-color: #1E88CD;
 }
