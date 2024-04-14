@@ -136,7 +136,7 @@ h1 {
 h3 {
     width: 100%;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size:medium;
         
 }
@@ -261,24 +261,22 @@ img {
 }
 
 
-#codingTrue:hover::before {
-    content: "front \0022";
-}
 
 #codingTrue:hover::after {
-    content: "\0022";
+    content: "stand-up";
 }
 
 #comicTrue:hover::after {
-    content: "stand up \1F921";
+    content: "nerd";
 }
 
-#originTrue:hover::before {
-    content: "norte-";
-}
 
 #originTrue:hover::after {
-    content: " \1F304";
+    content: "dev";
+}
+
+#mgTrue:hover::after {
+    content: "norte-mineiro"
 }
 
 .icons {
