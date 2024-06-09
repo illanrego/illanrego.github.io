@@ -85,6 +85,7 @@ header {
 #linksBar {
     display: flex;
     margin: 0 auto;
+    margin-top: 3px;
     background: none;
     width: fit-content;
     border-radius: 7px;
@@ -260,18 +261,12 @@ img {
 
 }
 
-
-
-#codingTrue:hover::after {
-    content: "stand-up";
-}
-
 #comicTrue:hover::after {
-    content: "nerd";
+    content: "stand-up comic";
 }
 
 
-#originTrue:hover::after {
+#devTrue:hover::after {
     content: "dev";
 }
 
@@ -295,4 +290,27 @@ p > a {
 
 p {
     margin-bottom: 2vh;
+}
+
+#contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactContainer img {
+    width: 20px ;
+}
+
+span {
+    display: inline;    
+}
+
+p:last-of-type {
+    margin-top: 4px;
+}
+
+#micIcon {
+    font-size: x-large;
 }
