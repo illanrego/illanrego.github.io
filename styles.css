@@ -152,8 +152,8 @@ li {
     background-color: var(--text2-color);
     width: fit-content;
     height: 100%;
-    padding-right: 3px;
-    padding-bottom: 9px;
+    padding-right: 2px;
+    padding-bottom: 7px;
     border-radius: 3px;
 }
 
