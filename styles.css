@@ -13,7 +13,6 @@
     --fade-color: #1B3B32;
    
 }
-   
 
 #night {
     margin: 0;
@@ -42,8 +41,6 @@
     padding: 0;
     font-size: x-large;
 }
-
-
 
 body {
     display:flex;
@@ -106,9 +103,6 @@ header {
     transform: rotate(1turn);
     transition: 0.25s;
 }
-
-
-
 
 
 h1, h2, h3 {
@@ -188,7 +182,9 @@ ul {
     margin-top: 3vh;
 }
 
-
+li a {
+	font-size: small;
+}
 
 #profilePicContainer {
     background: none;
