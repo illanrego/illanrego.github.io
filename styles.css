@@ -182,7 +182,7 @@ ul {
     margin-top: 3vh;
 }
 
-li a {
+li > a {
 	font-size: small;
 }
 
